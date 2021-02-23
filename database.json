@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "body": "walk",
+      "active": true
+    },
+    {
+      "id": 2,
+      "body": "walk",
+      "active": true
+    },
+    {
+      "id": 3,
+      "body": "walk",
+      "active": true
+    },
+    {
+      "id": 4,
+      "body": "cook",
+      "active": true
+    }
+  ]
+}

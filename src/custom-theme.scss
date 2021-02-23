@@ -1,0 +1,145 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+$general-typography: mat-typography-config(
+        $font-family: 'Lato, sans-serif',
+        $headline:     mat-typography-level(32px, 40px, 400),
+        $title:        mat-typography-level(25px, 32px, 400),
+        $subheading-2: mat-typography-level(20px, 32px, 300),
+        $subheading-1: mat-typography-level(16px, 24px, 500),
+        $body-2:       mat-typography-level(14px, 20px, 500),
+        $body-1:       mat-typography-level(14px, 20px, 400),
+        $caption:      mat-typography-level(12px, 20px, 400),
+        $button:       mat-typography-level(13px, 14px, 500),
+        $input:        mat-typography-level(13px, 1.2, 500)
+);
+
+@include mat-core($general-typography);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+/* For use in src/lib/core/theming/_palette.scss */
+$primary-palette: (
+    50 : #e6e6ea,
+    100 : #bfc1cb,
+    200 : #9598a8,
+    300 : #6b6e85,
+    400 : #4b4f6b,
+    500 : #2b3051,
+    600 : #262b4a,
+    700 : #202440,
+    800 : #1a1e37,
+    900 : #101327,
+    A100 : #6878ff,
+    A200 : #354bff,
+    A400 : #021eff,
+    A700 : #001ae7,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$warn-palette: (
+    50 : #ffe0e0,
+    100 : #ffb3b3,
+    200 : #ff8080,
+    300 : #ff4d4d,
+    400 : #ff2626,
+    500 : #ff0000,
+    600 : #ff0000,
+    700 : #ff0000,
+    800 : #ff0000,
+    900 : #ff0000,
+    A100 : #ffffff,
+    A200 : #fff2f2,
+    A400 : #ffbfbf,
+    A700 : #ffa6a6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$accent-palette: (
+    50 : #f6fde0,
+    100 : #e8fbb3,
+    200 : #d9f880,
+    300 : #caf54d,
+    400 : #bef326,
+    500 : #b3f100,
+    600 : #acef00,
+    700 : #a3ed00,
+    800 : #9aeb00,
+    900 : #8be700,
+    A100 : #ffffff,
+    A200 : #efffda,
+    A400 : #d8ffa7,
+    A700 : #ccff8e,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+$my-to-do-primary: mat-palette($primary-palette);
+$my-to-do-accent: mat-palette($accent-palette);
+
+// The warn palette is optional (defaults to red).
+$my-to-do-warn: mat-palette($warn-palette);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$my-to-do-theme: mat-light-theme($my-to-do-primary, $my-to-do-accent, $my-to-do-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($my-to-do-theme);
+
