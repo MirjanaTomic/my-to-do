@@ -43,12 +43,7 @@ export class ToDoListComponent implements OnInit {
     this.todoService.createTodo(newTodo)
     .subscribe(response => {
       console.log(response, 'created todos');
-      if(response.body === newTodo.body) {
-        alert('it exists already');
-        // this.todos.slice(0);
-      } else {
-        this.todos.push(response);
-      }
+      this.todos.push(response);
     });
     this.form.controls.todoInput.setValue('');
   }
