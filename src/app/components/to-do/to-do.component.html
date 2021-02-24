@@ -1,0 +1,12 @@
+<div *ngIf="todo">
+  <div id="todo-container" [ngClass]="{'completed-todo': isCompleted}">
+    <div class="todo">
+      <form [formGroup]="completedTodoForm">
+        <input type="checkbox" (click)="complete(todo)" formControlName="completeCheckbox" [checked]="!todo.active">
+      </form>
+      <p class="todo-text">{{ todo.body }}</p>
+    </div>
+    <button (click)="delete(todo)" class="delete-button">
+      <span>Delete</span><i class="far fa-trash-alt"></i></button>
+  </div>
+</div>

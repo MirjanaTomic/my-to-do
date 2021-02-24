@@ -1,0 +1,35 @@
+<div id="list-layout-container">
+  
+  <h1>
+    Task List
+  </h1>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input formControlName="todoInput" #todoInput type="text" placeholder="Enter your task here" required>
+    <button class="submit" type="submit" >
+      <span>Add Task</span><i class="fas fa-plus"></i>
+    </button>
+  </form>
+  
+</div>
+
+<div *ngIf="todos.length === 0" id="info-message" id="info-message">
+  <i class="fas fa-info-circle"></i>
+  <p>
+    To create your task list please use the input field and press "Add Task" button, or simply press ENTER key.
+  </p>
+</div>
+
+<div *ngIf="todos">
+  
+  <div *ngFor="let todo of todos">
+    <app-to-do [todo]="todo" (todoDeleted)="deleteTodo($event)" (toggleComplete)="toggleCompletion($event)"></app-to-do>
+  </div>
+
+</div>
+
+<div *ngIf="todos.length > 1" id="controls-container">
+  <button (click)="deleteAll()" class="delete-button">
+    <span>Delete All Tasks</span><i class="far fa-trash-alt"></i>
+  </button>
+</div>

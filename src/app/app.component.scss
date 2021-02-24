@@ -1,0 +1,10 @@
+@import '../styles.scss';
+
+#layout-container {
+  @include alignmentMixin(column, center, center);
+}
+
+#to-do-list-container {
+  width: 70vw;
+  @include alignmentMixin(column, center, center);
+}
