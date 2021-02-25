@@ -1,16 +1,11 @@
 <div id="list-layout-container" fxFlex>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()" class="enter-todo-form">
-    <!-- <input formControlName="todoInput" #todoInput type="text" placeholder="Enter your task here" required>
-    <button class="submit" type="submit" >
-      <span>Add Task</span><i class="fas fa-plus"></i>
-    </button> -->
     <mat-form-field appearance="outline">
       <!-- <mat-label>Outline form field</mat-label> -->
-      <input matInput formControlName="todoInput" #todoInput placeholder="Enter your task here" required>
-      <mat-error *ngIf="todoInput.invalid">{{getErrorMessage()}}</mat-error>
+      <input matInput formControlName="todoInput" #todoInput placeholder="Enter your task here">
     </mat-form-field>
-    <button mat-flat-button type="submit" color="primary">
+    <button mat-flat-button type="submit" color="primary" [disabled]="!todoInput.value">
       Add Task
     </button>
   </form>
