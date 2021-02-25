@@ -1,4 +1,4 @@
-<div *ngIf="todo">
+<!-- <div *ngIf="todo">
   <div id="todo-container" [ngClass]="{'completed-todo': isCompleted}">
     <div class="todo">
       <form [formGroup]="completedTodoForm">
@@ -9,4 +9,47 @@
     <button (click)="delete(todo)" class="delete-button">
       <span>Delete</span><i class="far fa-trash-alt"></i></button>
   </div>
+</div> -->
+
+<div *ngIf="todo">
+  <div class="todo-card mat-elevation-z2">
+    <form [formGroup]="completedTodoForm">
+      <mat-checkbox (click)="complete(todo)" formControlName="completeCheckbox" color="primary"></mat-checkbox>
+    </form>
+    <span>{{todo.body}}</span>
+    <div class="actions-container">
+      <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+      <button mat-icon-button color="warn" (click)="delete(todo)"><mat-icon>delete</mat-icon></button>
+    </div>
+  </div>
 </div>
+
+<!-- <div fxFlex id="todo-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z2">
+
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+        <mat-checkbox></mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-checkbox></mat-checkbox>
+      </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="task">
+      <th mat-header-cell *matHeaderCellDef>Task</th>
+      <td mat-cell *matCellDef="let element"> {{element.task}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element" fxLayoutGap="10%">
+        <mat-icon color="accent">edit</mat-icon>
+        <mat-icon color="warn">delete</mat-icon>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div> -->

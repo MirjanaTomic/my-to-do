@@ -1,10 +1,23 @@
 @import '../styles.scss';
 
 #layout-container {
-  @include alignmentMixin(column, center, center);
+  width: 100%;
+  height: 100%;
+
+  header {
+    @include alignmentMixin(column, center, center);
+    background-color: #226ac7;
+    height: 10%;
+
+    h1 {
+      color: white;
+    }
+  }
 }
 
 #to-do-list-container {
-  width: 70vw;
-  @include alignmentMixin(column, center, center);
+  width: 100%;
+  height: 80%;
+  // background-color: yellow;
+  @include alignmentMixin(row, center, center);
 }

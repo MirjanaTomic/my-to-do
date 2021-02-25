@@ -1,0 +1,26 @@
+@import '../../../styles.scss';
+
+#todo-container {
+  width: 100%;
+  // background-color: pink;
+
+  table {
+    width: 100%;
+  }
+
+}
+
+.todo-card {
+  background-color: white;
+  @include alignmentMixin(row, start, center);
+  padding: 20px 0 20px 30px;
+
+  span {
+    margin-left: 20px;
+    width: 70%;
+  }
+
+  .actions-container {
+    @include alignmentMixin(row, flex-end, center);
+  }
+}

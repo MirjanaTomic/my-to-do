@@ -1,0 +1,41 @@
+@import '../../../styles.scss';
+
+#list-layout-container {
+  @include alignmentMixin(column, start, center);
+  margin-top: 40px;
+  // background-color: yellowgreen;
+  min-width: 500px;
+  height: 100%;
+
+  .enter-todo-form {
+    @include alignmentMixin(row, center, center);
+    width: 100%;
+    // background-color: red;
+
+    .mat-form-field-appearance-outline {
+      width: 80%;
+    }
+    
+    button {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+#controls-container {
+  @include alignmentMixin(row, flex-end, center);
+  padding: 20px 0;
+}
+ 
+#info-message {
+  @include alignmentMixin(row, center, center);
+  padding: 15px 20px;
+  margin: 70px 20px;
+  background-color: #c0d8f2;
+  border-radius: 5px;
+
+  mat-icon {
+    margin-right: 10px;
+  }
+}

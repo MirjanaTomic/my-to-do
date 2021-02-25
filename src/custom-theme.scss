@@ -16,8 +16,7 @@ $general-typography: mat-typography-config(
         $body-2:       mat-typography-level(14px, 20px, 500),
         $body-1:       mat-typography-level(14px, 20px, 400),
         $caption:      mat-typography-level(12px, 20px, 400),
-        $button:       mat-typography-level(13px, 14px, 500),
-        $input:        mat-typography-level(13px, 1.2, 500)
+        $button:       mat-typography-level(13px, 14px, 500)
 );
 
 @include mat-core($general-typography);
@@ -94,21 +93,122 @@ $warn-palette: (
 );
 
 /* For use in src/lib/core/theming/_palette.scss */
+// $accent-palette: (
+//     50 : #fdfce4,
+//     100 : #faf8bc,
+//     200 : #f7f490,
+//     300 : #f3ef63,
+//     400 : #f1eb41,
+//     500 : #eee820,
+//     600 : #ece51c,
+//     700 : #e9e218,
+//     800 : #e7de13,
+//     900 : #e2d80b,
+//     A100 : #ffffff,
+//     A200 : #fffdda,
+//     A400 : #fffba7,
+//     A700 : #fff98d,
+//     contrast: (
+//         50 : #000000,
+//         100 : #000000,
+//         200 : #000000,
+//         300 : #000000,
+//         400 : #000000,
+//         500 : #000000,
+//         600 : #000000,
+//         700 : #000000,
+//         800 : #000000,
+//         900 : #000000,
+//         A100 : #000000,
+//         A200 : #000000,
+//         A400 : #000000,
+//         A700 : #000000,
+//     )
+// );
+/* For use in src/lib/core/theming/_palette.scss */
+$primary-palette: (
+    50 : #e6effa,
+    100 : #c0d8f2,
+    200 : #96bee9,
+    300 : #6ca4e0,
+    400 : #4d91d9,
+    500 : #2d7dd2,
+    600 : #2875cd,
+    700 : #226ac7,
+    800 : #1c60c1,
+    900 : #114db6,
+    A100 : #e5edff,
+    A200 : #b2cbff,
+    A400 : #7fa9ff,
+    A700 : #6597ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
 $accent-palette: (
-    50 : #f6fde0,
-    100 : #e8fbb3,
-    200 : #d9f880,
-    300 : #caf54d,
-    400 : #bef326,
-    500 : #b3f100,
-    600 : #acef00,
-    700 : #a3ed00,
-    800 : #9aeb00,
-    900 : #8be700,
+    50 : #e0fae0,
+    100 : #b3f2b3,
+    200 : #80ea80,
+    300 : #4de24d,
+    400 : #26db26,
+    500 : #00d500,
+    600 : #00d000,
+    700 : #00ca00,
+    800 : #00c400,
+    900 : #00ba00,
+    A100 : #e3ffe3,
+    A200 : #b0ffb0,
+    A400 : #7dff7d,
+    A700 : #63ff63,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$accent-palette: (
+    50 : #ffffe9,
+    100 : #feffc9,
+    200 : #feffa5,
+    300 : #fdff80,
+    400 : #fcff65,
+    500 : #fcff4a,
+    600 : #fcff43,
+    700 : #fbff3a,
+    800 : #fbff32,
+    900 : #faff22,
     A100 : #ffffff,
-    A200 : #efffda,
-    A400 : #d8ffa7,
-    A700 : #ccff8e,
+    A200 : #ffffff,
+    A400 : #feffd1,
+    A700 : #fdffb8,
     contrast: (
         50 : #000000,
         100 : #000000,
@@ -126,8 +226,6 @@ $accent-palette: (
         A700 : #000000,
     )
 );
-
-
 
 $my-to-do-primary: mat-palette($primary-palette);
 $my-to-do-accent: mat-palette($accent-palette);

@@ -1,6 +1,17 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ToDo } from '../../models/todo';
 import { FormGroup, FormControl } from '@angular/forms';
+import { MatTableDataSource } from '@angular/material/table';
+export interface PeriodicElement {
+  task: string;
+  position: number;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {position: 1, task: 'Hydrogen'},
+  {position: 2, task: 'Helium'},
+  {position: 3, task: 'Lithium'}
+];
 
 @Component({
   selector: 'app-to-do',
@@ -17,6 +28,10 @@ export class ToDoComponent implements OnInit {
 
   @Input() isCompleted: boolean;
 
+  displayedColumns: string[] = ['select', 'task', 'action'];
+  dataSource = ELEMENT_DATA;
+  // dataSource: MatTableDataSource<ToDo>;
+
   completedTodoForm = new FormGroup({
     completeCheckbox: new FormControl('')
   });
@@ -24,6 +39,8 @@ export class ToDoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // console.log(this.dataSource);
+    // this.dataSource = this.todo;
   }
 
   delete(todo: ToDo) {
