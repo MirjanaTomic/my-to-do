@@ -10,9 +10,8 @@ import { ToDo } from '../../models/todo';
 })
 export class ToDoListComponent implements OnInit {
 
-  todos: ToDo[] = [];
+  todos: ToDo[];
   todo: ToDo;
-  // isInputEmpty: boolean;
   form = new FormGroup({
     todoInput: new FormControl('')
   });

@@ -18,6 +18,5 @@
 #to-do-list-container {
   width: 100%;
   height: 80%;
-  // background-color: yellow;
-  @include alignmentMixin(row, center, center);
+  @include alignmentMixin(row, center, flex-start);
 }
