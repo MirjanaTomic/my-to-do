@@ -1,11 +1,11 @@
 <div *ngIf="todo">
   <div class="todo-card mat-elevation-z2">
     <form [formGroup]="completedTodoForm">
-      <mat-checkbox (click)="complete(todo)" formControlName="completeCheckbox" color="primary"></mat-checkbox>
+      <mat-checkbox (click)="complete(todo)" formControlName="completeCheckbox" color="accent"></mat-checkbox>
     </form>
     <span>{{todo.body}}</span>
     <div class="actions-container">
-      <button mat-icon-button color="primary" matTooltip="Edit the task" [matTooltipPosition]="position"><mat-icon>edit</mat-icon></button>
+      <button mat-icon-button color="accent" matTooltip="Edit the task" [matTooltipPosition]="position"><mat-icon>edit</mat-icon></button>
       <button mat-icon-button color="warn" (click)="delete(todo)" matTooltip="Delete the task" [matTooltipPosition]="position"><mat-icon>delete</mat-icon></button>
     </div>
   </div>

@@ -26,39 +26,38 @@ $general-typography: mat-typography-config(
 // hue. Available color palettes: https://material.io/design/color/
 /* For use in src/lib/core/theming/_palette.scss */
 $primary-palette: (
-    50 : #e6e6ea,
-    100 : #bfc1cb,
-    200 : #9598a8,
-    300 : #6b6e85,
-    400 : #4b4f6b,
-    500 : #2b3051,
-    600 : #262b4a,
-    700 : #202440,
-    800 : #1a1e37,
-    900 : #101327,
-    A100 : #6878ff,
-    A200 : #354bff,
-    A400 : #021eff,
-    A700 : #001ae7,
+    50 : #e6effa,
+    100 : #c0d8f2,
+    200 : #96bee9,
+    300 : #6ca4e0,
+    400 : #4d91d9,
+    500 : #2d7dd2,
+    600 : #2875cd,
+    700 : #226ac7,
+    800 : #1c60c1,
+    900 : #114db6,
+    A100 : #e5edff,
+    A200 : #b2cbff,
+    A400 : #7fa9ff,
+    A700 : #6597ff,
     contrast: (
         50 : #000000,
         100 : #000000,
         200 : #000000,
-        300 : #ffffff,
-        400 : #ffffff,
+        300 : #000000,
+        400 : #000000,
         500 : #ffffff,
         600 : #ffffff,
         700 : #ffffff,
         800 : #ffffff,
         900 : #ffffff,
         A100 : #000000,
-        A200 : #ffffff,
-        A400 : #ffffff,
-        A700 : #ffffff,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
     )
 );
 
-/* For use in src/lib/core/theming/_palette.scss */
 $warn-palette: (
     50 : #ffe0e0,
     100 : #ffb3b3,
@@ -80,73 +79,6 @@ $warn-palette: (
         200 : #000000,
         300 : #000000,
         400 : #ffffff,
-        500 : #ffffff,
-        600 : #ffffff,
-        700 : #ffffff,
-        800 : #ffffff,
-        900 : #ffffff,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
-    )
-);
-
-/* For use in src/lib/core/theming/_palette.scss */
-// $accent-palette: (
-//     50 : #fdfce4,
-//     100 : #faf8bc,
-//     200 : #f7f490,
-//     300 : #f3ef63,
-//     400 : #f1eb41,
-//     500 : #eee820,
-//     600 : #ece51c,
-//     700 : #e9e218,
-//     800 : #e7de13,
-//     900 : #e2d80b,
-//     A100 : #ffffff,
-//     A200 : #fffdda,
-//     A400 : #fffba7,
-//     A700 : #fff98d,
-//     contrast: (
-//         50 : #000000,
-//         100 : #000000,
-//         200 : #000000,
-//         300 : #000000,
-//         400 : #000000,
-//         500 : #000000,
-//         600 : #000000,
-//         700 : #000000,
-//         800 : #000000,
-//         900 : #000000,
-//         A100 : #000000,
-//         A200 : #000000,
-//         A400 : #000000,
-//         A700 : #000000,
-//     )
-// );
-/* For use in src/lib/core/theming/_palette.scss */
-$primary-palette: (
-    50 : #e6effa,
-    100 : #c0d8f2,
-    200 : #96bee9,
-    300 : #6ca4e0,
-    400 : #4d91d9,
-    500 : #2d7dd2,
-    600 : #2875cd,
-    700 : #226ac7,
-    800 : #1c60c1,
-    900 : #114db6,
-    A100 : #e5edff,
-    A200 : #b2cbff,
-    A400 : #7fa9ff,
-    A700 : #6597ff,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
         500 : #ffffff,
         600 : #ffffff,
         700 : #ffffff,
@@ -194,41 +126,9 @@ $accent-palette: (
 );
 
 /* For use in src/lib/core/theming/_palette.scss */
-$accent-palette: (
-    50 : #ffffe9,
-    100 : #feffc9,
-    200 : #feffa5,
-    300 : #fdff80,
-    400 : #fcff65,
-    500 : #fcff4a,
-    600 : #fcff43,
-    700 : #fbff3a,
-    800 : #fbff32,
-    900 : #faff22,
-    A100 : #ffffff,
-    A200 : #ffffff,
-    A400 : #feffd1,
-    A700 : #fdffb8,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
-        500 : #000000,
-        600 : #000000,
-        700 : #000000,
-        800 : #000000,
-        900 : #000000,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
-    )
-);
 
 $my-to-do-primary: mat-palette($primary-palette);
-$my-to-do-accent: mat-palette($accent-palette);
+$my-to-do-accent: mat-palette($accent-palette, 900);
 
 // The warn palette is optional (defaults to red).
 $my-to-do-warn: mat-palette($warn-palette);
