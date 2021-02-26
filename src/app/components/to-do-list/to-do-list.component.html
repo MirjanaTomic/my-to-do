@@ -19,16 +19,16 @@
 </div>
 
 <div *ngIf="todos">
-  <div *ngFor="let todo of pageSlice">
+  <div *ngFor="let todo of todos">
     <app-to-do [todo]="todo" (todoDeleted)="deleteTodo($event)" (toggleComplete)="toggleCompletion($event)"></app-to-do>
   </div>
-  <mat-paginator class="mat-elevation-z2"
+  <!-- <mat-paginator class="mat-elevation-z2"
     [length]="todos.length"
     [pageSize]="5"
     showFirstLastButtons
     [pageSizeOptions]="[5, 10, 15]"
     (page)="onPageChange($event)"
-    ></mat-paginator>
+    ></mat-paginator> -->
 </div>
 
 <div *ngIf="todos.length > 1" id="controls-container">

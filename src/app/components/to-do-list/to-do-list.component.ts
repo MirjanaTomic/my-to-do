@@ -25,7 +25,7 @@ export class ToDoListComponent implements OnInit {
     .subscribe((data: ToDo[]) => {
       this.todos = data;
       console.log(this.todos);
-      this.pageSlice = this.todos.slice(0, 5);
+      // this.pageSlice = this.todos.slice(0, 5);
     });
   }
 
@@ -86,15 +86,15 @@ export class ToDoListComponent implements OnInit {
   }
 
   
-  onPageChange(event: PageEvent) {
-    console.log(event);
-    const startIndex = event.pageIndex * event.pageSize;
-    let endIndex = startIndex + event.pageSize;
-    if (endIndex > this.todos.length) {
-      endIndex = this.todos.length;
-    }
+  // onPageChange(event: PageEvent) {
+  //   console.log(event);
+  //   const startIndex = event.pageIndex * event.pageSize;
+  //   let endIndex = startIndex + event.pageSize;
+  //   if (endIndex > this.todos.length) {
+  //     endIndex = this.todos.length;
+  //   }
 
-    this.pageSlice = this.todos.slice(startIndex, endIndex);
-  }
+  //   this.pageSlice = this.todos.slice(startIndex, endIndex);
+  // }
 
 }
